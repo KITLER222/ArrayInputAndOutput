@@ -10,24 +10,20 @@ namespace arrayInputAndOutput
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("введите первое число:");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите количесто элементов массива: ");
+            int length = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("введите второе число:");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[length];
+                for (int i = 0; i < length; i++)
+                {
+                    Console.WriteLine($"введите элемент массива{i + 1}:");
+                    array[i] = Convert.ToInt32(Console.ReadLine());
+                }
 
-            Console.WriteLine("введите третье число:");
-            int num3 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("введите четвертое число:");
-            int num4 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("введите пятое число:");
-            int num5 = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 0; i < 1; i++)
+            Console.WriteLine("Вывод: ");
+            for (int i = 0; i < length; i++)
             {
-                Console.WriteLine($"вывод:{num1} {num2} {num3} {num4} {num5}");
+                Console.WriteLine(array[i]);
             }
 
 
